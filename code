@@ -1,0 +1,84 @@
+import re
+
+def check_password_complexity(password):
+    """
+    Check the complexity of a given password.
+
+    Args:
+    password (str): The password string to check.
+
+    Returns:
+    str: A message indicating whether the password is valid or the reason it is not.
+    """
+    
+    # Check if the length is at least 8 characters
+    if len(password) < 8:
+        return "Password must be at least 8 characters long"
+    
+    # Check if it contains at least one lowercase letter
+    if not re.search("[a-z]", password):
+        return "Password must contain at least one lowercase letter"
+    
+    # Check if it contains at least one uppercase letter
+    if not re.search("[A-Z]", password):
+        return "Password must contain at least one uppercase letter"
+    
+    # Check if it contains at least one digit
+    if not re.search("[0-9]", password):
+        return "Password must contain at least one digit"
+    
+    # Check if it contains at least one special character
+    if not re.search("[_@$]", password):
+        return "Password must contain at least one special character (e.g., _, @, $)"
+    
+    # Check if it contains any spaces
+    if re.search("\s", password):
+        return "Password must not contain spaces"
+    
+    return "Valid Password"
+
+# Example usage
+password = "R@m@_f0rtu9e$"
+print(check_password_complexity(password))
+import re
+
+def check_password_complexity(password):
+    """
+    Check the complexity of a given password.
+
+    Args:
+    password (str): The password string to check.
+
+    Returns:
+    str: A message indicating whether the password is valid or the reason it is not.
+    """
+    
+    # Check if the length is at least 8 characters
+    if len(password) < 8:
+        return "Password must be at least 8 characters long"
+    
+    # Check if it contains at least one lowercase letter
+    if not re.search("[a-z]", password):
+        return "Password must contain at least one lowercase letter"
+    
+    # Check if it contains at least one uppercase letter
+    if not re.search("[A-Z]", password):
+        return "Password must contain at least one uppercase letter"
+    
+    # Check if it contains at least one digit
+    if not re.search("[0-9]", password):
+        return "Password must contain at least one digit"
+    
+    # Check if it contains at least one special character
+    if not re.search("[_@$]", password):
+        return "Password must contain at least one special character (e.g., _, @, $)"
+    
+    # Check if it contains any spaces
+    if re.search("\s", password):
+        return "Password must not contain spaces"
+    
+    return "Valid Password"
+
+# Example usage
+password = "R@m@_f0rtu9e$"
+print(check_password_complexity(password))
